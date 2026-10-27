@@ -1,0 +1,23 @@
+services:
+  spooky:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "19160:19160"
+    environment:
+      SPOOKY_FLAG: ${SPOOKY_FLAG:-spooky{reused_k_no_nons3nse_89f3ae32316e}}
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: 128m
+    cpus: 0.50
+    pids_limit: 64
+    ulimits:
+      nofile:
+        soft: 256
+        hard: 256

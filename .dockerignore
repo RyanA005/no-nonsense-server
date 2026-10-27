@@ -1,0 +1,12 @@
+.git
+.venv
+data/private
+data/public
+tools/solve.py
+docs/ORGANIZER.md
+tests
+dist
+**/*.o
+spooky-server
+spooky-client
+**/__pycache__

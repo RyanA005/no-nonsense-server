@@ -1,0 +1,16 @@
+spooky-server
+spooky-client
+*.o
+.venv/
+__pycache__/
+dist/
+data/private/
+data/public/
+data/runtime/
+*.pyc
+*.safetensors
+distribution/model/
+*-dist.zip
+violet-vault-dist.zip
+spooky-vault-dist.zip
+outputs/
